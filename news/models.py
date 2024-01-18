@@ -8,6 +8,7 @@ class Post(models.Model):
         ('draft','پیش نویس'),
         ('published','منتشر شده')
     )
+    
     title = models.CharField(max_length = 250,verbose_name = 'عنوان خبر')
     slug = models.SlugField(max_length = 500, unique_for_date = 'publish')
     body = models.TextField(verbose_name='متن خبر',null=True,blank = True)
