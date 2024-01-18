@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+{% for post in posts %}
+<h1><a href='{% url "news:single_page" post.id %}'>{{post.title}}</a></h1>
+<strong>{{post.created}}</strong>
+<p>{{post.body}}</p>
+{% endfor %}
+
+</body>
+
+</html>
